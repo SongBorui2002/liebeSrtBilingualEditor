@@ -1,0 +1,52 @@
+.subtitle-column {
+    height: 70vh;
+    overflow-y: auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subtitle-entry {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.time-code {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.subtitle-text {
+    width: 100%;
+    min-height: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.upload-section {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 添加滚动条样式 */
+.subtitle-column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.subtitle-column::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.subtitle-column::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.subtitle-column::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
