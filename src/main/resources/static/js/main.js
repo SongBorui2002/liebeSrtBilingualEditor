@@ -103,11 +103,20 @@ function renderSubtitles() {
 function createSubtitleEntry(entry, index, isEnglish) {
     const div = document.createElement('div');
     div.className = 'subtitle-entry';
+    // 设置序号、时间码和文本,各字幕序号应与srt文件中的序号一致，中文字幕序号应+1
     div.innerHTML = `
-        <div class="time-code">${entry.timeCode}</div>
+        <div class="subtitle-header">
+            <span class="subtitle-index">${isEnglish ? entry.index : entry.index + 1}</span>
+            <span class="time-code">${entry.timeCode}</span>
+        </div>
         <textarea class="subtitle-text" data-index="${index}" data-type="${isEnglish ? 'english' : 'chinese'}"
             >${isEnglish ? entry.englishText : entry.chineseText}</textarea>
     `;
+    // div.innerHTML = `
+    //     <div class="time-code">${entry.timeCode}</div>
+    //     <textarea class="subtitle-text" data-index="${index}" data-type="${isEnglish ? 'english' : 'chinese'}"
+    //         >${isEnglish ? entry.englishText : entry.chineseText}</textarea>
+    // `;
 
     // 添加文本框变化事件
     const textarea = div.querySelector('textarea');
